@@ -1,0 +1,29 @@
+{
+  "name": "denon-alexa",
+  "version": "1.0.0",
+  "description": "Denon AVR control via Amazon Echo Alexa",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razzad/denon-alexa.git"
+  },
+  "keywords": [
+    "alexa",
+    "amazon",
+    "echo",
+    "denon",
+    "avr"
+  ],
+  "author": "Robert Bruchhardt",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/razzad/denon-alexa/issues"
+  },
+  "homepage": "https://github.com/razzad/denon-alexa#readme",
+  "dependencies": {
+    "denon-client": "^0.1.8"
+  }
+}
