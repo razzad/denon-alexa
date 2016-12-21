@@ -51,11 +51,11 @@ app.intent('denon-alexa', {
 	      return true;
 
 	    } else {
-
+console.log(CommandLanguageMapping(command));
 	      var denonCommand = new DenonCommandHelper();
-	   denonCommand.requestSendCommand(command, parameter).then(function() {
+	   denonCommand.requestSendCommand(CommandLanguageMapping(command), parameter).then(function() {
 
- res.say(CommandLanguageMapping(command) + " "+ parameter + " wurde ausgeführt.").send();
+ res.say(command + " "+ parameter + " wurde ausgeführt.").send();
 
 	      }).catch(function(err) {
 

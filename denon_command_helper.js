@@ -3,8 +3,10 @@
 	var rp = require('request-promise');
 
 
-	var ENDPOINT = 'http://localhost:3000/api/denon';
-
+	var ENDPOINT = (process.env.ENDPOINT ||'http://localhost:3000/api/denon');
+var username = process.env.username ||'robert';
+    var password =process.env.password ||'secret';
+    var auth = 'Basic ' + new Buffer(username + ':' + password).toString('base64');
   	function DenonCommandHelper() { }
 
 	
@@ -29,7 +31,7 @@ var options = {
     resolveWithFullResponse: true,
     json: true,
 		headers: {
-        'Authorization': 'Basic cm9iZXJ0OnNlY3JldA==',
+        'Authorization': auth,
 				'Content-Type': 'application/json'
     },
 		body: {
